@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+        <title>Library</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <script src="./filter.js"></script>
+    </head>
+    <body>
+    <div class="header">
+        <div class="main">
+            <div class="navbar">
+                <div class="logo">
+                   <img src="logo.png" width="125px">
+                </div>
+               <nav>
+                <div class="toggle" onclick="toggleMenu();">
+                   <ul>
+                      <li><a herf="#home" class="btn0" onclick="toggleMenu();">Home</a></li>
+                      <li><a herf="#books" class="btn0" onclick="toggleMenu();">Books</a></li>
+                      <li><a herf="#about" class="btn0" onclick="toggleMenu();">About</a></li>
+                      <li><a herf="#contact" class="btn0" onclick="toggleMenu();">Contact</a></li>
+                   </ul>
+                </div>
+                </nav>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <h1> Library</h1>
+                    <h3>"A library is a hospital <br>  for the mind."</h3>
+                    <a href="" class="btn">Learn More</a>
+                </div>
+                <div class="col-2">
+                    <img src="2.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        
+        <div class="con">
+            <div class="small">
+                <h1 class="title">New Release Books</h1>
+                    <div class="row">
+                        <div class="col-3">
+                            <img src="book1.png">
+                            <h4>Australian Fish</h4>
+                            <p>Colleen Hoover</p>
+                        </div>
+                        <div class="col-3">
+                            <img src="book2.png">
+                            <h4>Li-Ion Battery</h4>
+                            <p>Chetan Bhagat</p>
+                        </div>
+                        <div class="col-3">
+                            <img src="book3.png">
+                            <h4>GPCR Dynamics</h4>
+                            <p>Sudeep Nagarkar</p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+
+        
+        <div class="book">
+            <h1 class="title">List of Books</h1>
+    
+        <div class="outer-wrapper">
+            <div class="table-wrapper">
+            <table id="emp-table">
+                <thead>
+                    <th col-index = 1>Title</th>
+                    <th col-index = 2>Author
+                        <select class="table-filter" onchange="filter_rows()">
+                            <option value="all"></option>
+                        </select>
+                    </th>
+        
+                    <th col-index = 3>Subject
+                        <select class="table-filter" onchange="filter_rows()">
+                            <option value="all"></option>
+                        </select>
+                    </th>
+                    <th col-index = 4>Publish Year
+                        <select class="table-filter" onchange="filter_rows()">
+                            <option value="all"></option>
+                        </select>
+                    </th>
+                  
+                    
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Novermber 9</td>
+                        <td>Colleen Hoover</td>
+                        <td>Love</td>
+                        <td>2015</td>
+                    </tr>
+                    <tr>
+                        <td>The Girl in Room 105</td>
+                        <td>Chetan Bhagat</td>
+                        <td>Thriller</td>
+                        <td>2018</td>
+                    </tr>
+                    <tr>
+                        <td>Revolution 2020</td>
+                        <td>Chetan Bhagat</td>
+                        <td>Mystery</td>
+                        <td>2020</td>
+                    </tr>
+                    <tr>
+                        <td>Stand By Me</td>
+                        <td>Sudeep Nagarkar</td>
+                        <td>Thriller</td>
+                        <td>2020</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>400 Days</td>
+                        <td>Chetan Bhagat</td>
+                        <td>Mystery</td>
+                        <td>2015</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>Ugly Love</td>
+                        <td>Colleen Hoover</td>
+                        <td>Love</td>
+                        <td>2020</td>
+                    
+                    </tr>
+                    <tr>
+                        <td>It Ends with Us</td>
+                        <td>Colleen Hoover</td>
+                        <td>Thriller</td>
+                        <td>2018</td>
+                    
+                    </tr>
+                    <tr>
+                        <td>It was always You</td>
+                        <td>Sudeep Nagarkar</td>
+                        <td>Love</td>
+                        <td>2015</td>
+                    
+                    </tr>
+                    <tr>
+                        <td>The Secrets we Keep</td>
+                        <td>Sudeep Nagarkar</td>
+                        <td>Thriller</td>
+                        <td>2018</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>She Friend Zoned my Love</td>
+                        <td>Sudeep Nagarkar</td>
+                        <td>Love</td>
+                        <td>2015</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>Layla: Roman</td>
+                        <td>Colleen Hoover</td>
+                        <td>Mystery</td>
+                        <td>2020</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>Half Girlfriend</td>
+                        <td>Chetan Bhagat</td>
+                        <td>Love</td>
+                        <td>2018</td>
+                        
+                    </tr>
+                    
+        
+                </tbody>
+            </table>
+            <!-- <script>getUniqueValuesFromColumn()
+            </script> -->
+            <script>
+                window.onload = () => {
+                    console.log(document.querySelector("#emp-table > tbody > tr:nth-child(1) > td:nth-child(2) ").innerHTML);
+                };
+        
+                getUniqueValuesFromColumn()
+                
+            </script>
+
+
+        </div>
+        </div>
+    </div>
+
+    <section class="contact" id="contact">
+
+        <div class="content">
+
+            <div class="contactInfoBx">
+                <div class="row">
+                     
+                        <div class="box">
+                            <div class="text">
+                                 <h3>Address</h3>
+                                    <p>Gandhi Institute of Technology and Management, <br> Hyderabad, 502329</p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="text">
+                                <h3>Phone</h3>
+                                <p>+91-1234567890</p>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="text">
+                                 <h3>Email</h3>
+                                <p>221910312035@gitam.in</p>
+                            </div>
+                            </div>
+                        
+                </div>
+            </div>
+        </div>
+    </section>
+    
+        <div class="copyright">
+            <h4>Copyright 2022 ©. All Right Reserved</h4>
+        </div>
+
+    </body>
+</html>
